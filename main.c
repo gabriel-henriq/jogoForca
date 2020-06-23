@@ -8,7 +8,7 @@
 #include "TelaDeAbertura.c"
 #include "Menu.c"
 int main() {
-	//telaAbertura();
+	telaAbertura();
 	menuPrincipal();
 	return 0;
 }
