@@ -1,15 +1,4 @@
-// Define cores das letras e fundo.
-HANDLE hConsole;
-WORD corNormal;
-CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-// Define cores das letras e fundo.
-
 void telaAbertura(void) {
-	// Define cores das letras e fundo./ Define cores das letras e fundo.
-	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
-	corNormal = consoleInfo.wAttributes;
-	// Define cores das letras e fundo.
 	int linhaInicial = 3, colunaInicial = 23, recuperaLinhaInicial = linhaInicial, mudaLinha, imprimeLinhas, imprimeLetras, i, j;
 	char nome[35] = {"Desenvolvido por: Gabriel Henrique"};
 	int letras[11][7]= {
@@ -108,8 +97,5 @@ void telaAbertura(void) {
 	gotoxy(30,25);
 	printf("COME%CAR (ENTER)", 128);
 	do {
-		if(kbhit) {
-			tecla = getch();
-		}
-	} while (tecla != 13);
+	} while (getch() != 13);
 }
